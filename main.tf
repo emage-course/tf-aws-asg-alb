@@ -1,10 +1,3 @@
-# EC2 instance standalone
-# -----------
-# resource "aws_instance" "dev_instance" {
-#   ami           = "ami-00c39f71452c08778"
-#   instance_type = "t2.micro"
-# }
-# -----------
 
 # ASG with Launch template
 resource "aws_launch_template" "sh_ec2_launch_templ" {
