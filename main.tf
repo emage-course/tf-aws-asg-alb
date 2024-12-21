@@ -15,7 +15,9 @@ resource "aws_launch_template" "sh_ec2_launch_templ" {
     resource_type = "instance"
 
     tags = {
-      Name = "dev-instance"
+      Name        = "portfolio.example.com"
+      Environment = "production"
+      Owner       = "Cloud team"
     }
   }
 }
