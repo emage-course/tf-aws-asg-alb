@@ -4,7 +4,7 @@
 
 resource "aws_route53_record" "solomon_portfolio" {
   zone_id = "Z06639414QTF8GXLZVRH" # Replace with your actual hosted zone ID
-  name    = "solomon-portfolio"   # Domain/subdomain name
+  name    = "solomon-portfolio"    # Domain/subdomain name
   type    = "A"
 
   alias {
