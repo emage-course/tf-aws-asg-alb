@@ -25,3 +25,17 @@ resource "aws_lb_listener" "sh_front_end" {
     target_group_arn = aws_lb_target_group.sh_alb_tg.arn
   }
 }
+
+
+####################################################
+# # Create an A record in the hosted zone
+####################################################
+
+resource "aws_route53_record" "emagetech" {
+  zone_id    = "Z06639414QTF8GXLZVRH"
+  name       = "solomon-portfolio"
+  type       = "A"
+  ttl        = "300"
+  records    = [aws_instance.portfolio.public_ip]
+  depends_on = [aws_instance.portfolio]
+}
